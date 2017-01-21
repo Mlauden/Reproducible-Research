@@ -77,11 +77,21 @@ plot(meanPerDay$Group.1,meanPerDay$x, type="l", xlab="Interval",ylab = "Mean Ste
 ####2.Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 ```r
+#Number of max Steps
 max(meanPerDay$x)
 ```
 
 ```
 ## [1] 206.1698
+```
+
+```r
+#Interval with Max steps
+meanPerDay[which.max(meanPerDay$x),1]
+```
+
+```
+## [1] 835
 ```
 
 ###Imputing missing values
